@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+const Header = ({ isDarkMode, onToggleDarkMode }) => {
 
-  const toggleDarkMode = (e) => {
-    setIsDarkMode(isDarkMode => !isDarkMode)
+  // This is not really necessary right now since it's just one line of code, but will be useful when handling forms.
+  function handleToggleDarkMode(e) {
+    onToggleDarkMode();
   }
 
   return (
@@ -13,7 +13,7 @@ const Header = () => {
         <span className="logo">{"//"}</span>
         Project Showcase
       </h1>
-      <button onClick={toggleDarkMode}>{isDarkMode ? "Light Mode" : "Dark Mode"}</button>
+      <button onClick={handleToggleDarkMode}>{isDarkMode ? "Light Mode" : "Dark Mode"}</button>
     </header>
   );
 }
