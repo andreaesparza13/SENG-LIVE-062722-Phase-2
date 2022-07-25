@@ -23,6 +23,7 @@ presentation:
 
 ## Project Showcase Features
 
+- Persist projects to database upon submitting the ProjectForm
 - Load all projects from db on component load
 - Load all phase 4 projects from db when users click on the phase 4 button
 - Load all matching projects from db by phase and value in the search input
@@ -282,3 +283,7 @@ The solution
 - useEffect with an empty dependency array is your go to tool for fetching data when a component first loads
 
 <br>
+
+<!-- slide -->
+
+<img src="assets/component-lifecycle.drawio.svg" width="1500" height="900"/>
